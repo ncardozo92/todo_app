@@ -18,7 +18,10 @@ C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\System.Web.Http.WebHost.xml
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\es\System.Net.Http.Formatting.resources.dll
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\es\System.Web.Http.resources.dll
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\es\System.Web.Http.WebHost.resources.dll
-C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\obj\Debug\ToDo_api.csprojResolveAssemblyReference.cache
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\obj\Debug\ToDo_api.csproj.CoreCompileInputs.cache
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\obj\Debug\ToDo_api.dll
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\obj\Debug\ToDo_api.pdb
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\System.Web.Cors.dll
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\System.Web.Http.Cors.dll
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\System.Web.Http.Cors.xml
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\obj\Debug\ToDo_api.csprojResolveAssemblyReference.cache
