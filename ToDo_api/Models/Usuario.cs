@@ -23,6 +23,7 @@ namespace ToDo_api.Models
         [Required]
         [StringLength(30)]
         [DataMember]
+        [EmailAddress]
         public string Mail { get; set; }
 
         [Required]

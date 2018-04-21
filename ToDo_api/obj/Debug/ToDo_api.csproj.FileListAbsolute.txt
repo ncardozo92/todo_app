@@ -24,4 +24,11 @@ C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\obj\Debug\ToDo_api.pdb
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\System.Web.Cors.dll
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\System.Web.Http.Cors.dll
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\System.Web.Http.Cors.xml
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\obj\Debug\ToDo_api.csproj.CopyComplete
 C:\Users\Nicolás\Documents\ToDo\ToDo\ToDo_api\obj\Debug\ToDo_api.csprojResolveAssemblyReference.cache
