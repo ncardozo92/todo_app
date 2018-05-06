@@ -14,22 +14,7 @@ namespace ToDo_api.Controllers
     {
         private UsuarioService usuarioService = new UsuarioService();
         //private AppModel Context = new AppModel();
-
-        /*
-        [HttpPost]
-        public HttpResponseMessage Login(Usuario usuario)
-        {
-            if (usuario.Username.Length == 0 || usuario.Clave.Length == 0)
-                return Request.CreateResponse(HttpStatusCode.Unauthorized, "Usuario no autorizado");
-
-            Usuario usuarioAutenticado = Context.Usuario.FirstOrDefault(u => u.Username == usuario.Username && u.Clave == usuario.Clave);
-
-            if( usuarioAutenticado != null)
-                return Request.CreateResponse(HttpStatusCode.OK, usuarioAutenticado);
-            else
-                return Request.CreateResponse(HttpStatusCode.NotFound, "No se encontró el usuario");
-        }
-        */
+        
         [HttpGet]
         public HttpResponseMessage GetId(string jwt)
         {
@@ -42,11 +27,11 @@ namespace ToDo_api.Controllers
             if (usuario.Username.Length == 0 || usuario.Clave.Length == 0)
                 return Request.CreateResponse(HttpStatusCode.Unauthorized, "Usuario no autorizado");
 
-            Usuario usuarioAutenticado = usuarioService.GetUsuario(usuario);
+            Usuario usuarioEncontrado = usuarioService.GetUsuario(usuario);
 
-                if (usuarioAutenticado != null)
+                if (usuarioEncontrado != null && usuarioEncontrado.Clave == usuario.Clave)
                 {
-                    string token = usuarioService.GenerateToken(usuarioAutenticado);
+                    string token = usuarioService.GenerateToken(usuarioEncontrado);
 
                     if(token != null)
                         return Request.CreateResponse(HttpStatusCode.OK,token);

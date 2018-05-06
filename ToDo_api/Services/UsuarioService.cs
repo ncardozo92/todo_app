@@ -22,7 +22,7 @@ namespace ToDo_api.Services
 
         public Usuario GetUsuario(Usuario usuario)
         {
-            return Context.Usuario.FirstOrDefault(u => u.Username == usuario.Username && u.Clave == usuario.Clave);
+            return Context.Usuario.FirstOrDefault(u => u.Username == usuario.Username || u.Mail == usuario.Mail);
         }
 
         public string GenerateToken(Usuario usuario)
@@ -50,26 +50,30 @@ namespace ToDo_api.Services
 
         public long GetIdFromJwt(string token)
         {
-            var jwtToken = handler.ReadJwtToken(token);
-            
-            return long.Parse(jwtToken.Claims.First(claim => claim.Type == "UserId").Value);
-        }
+            var symmetricKey = Convert.FromBase64String(Secret);
 
-        public bool ValidarToken(string token)
-        {
-            SecurityToken securityToken;//?
-            var parameters = new TokenValidationParameters()
+            SecurityToken securityToken;
+
+            try
             {
-                RequireExpirationTime = true,
-                ValidateIssuer = false,
-                ValidateAudience = false,
-                IssuerSigningKey = new SymmetricSecurityKey(Convert.FromBase64String(Secret))
-            };
+                var validationParameters = new TokenValidationParameters()
+                {
+                    RequireExpirationTime = true,
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    IssuerSigningKey = new SymmetricSecurityKey(symmetricKey)
+                };
 
-            var principal = handler.ValidateToken(token,parameters, out securityToken);
+                var principal = handler.ValidateToken(token, validationParameters, out securityToken);
 
-            //flata todavia, usar manejo de errores
+                return long.Parse(principal.Claims.First(claim => claim.Type == "UserId").Value);
+            }
+            catch
+            {
+                return 0;
+            }
         }
+
 
         public bool CrearUsuario(Usuario usuario)
         {
